@@ -17,3 +17,7 @@ useEffect:
         and componentDidMount combined lifecycle in React's functional component
 syntax:
     useEffect(effectFunction, arrayDependencies)
+functions:
+    -   useEffect calls can be skipped i.e not invoked on every render. This is done by 
+        passing a second array argument to the effect function.(dependency array)
+    -   Without an array dependency, the effect function will be run after every single render.
