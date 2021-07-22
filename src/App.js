@@ -1,33 +1,32 @@
-// import React, { useState, useEffect } from 'react';
-// export default function Greeting() {
+// Class Component
+// import React from 'react';
 
+// class Counter extends React.Component {
+//   constructor() {
+//     this.state = { count: 0 };
+//     this.incrementCount = this.incrementCount.bind(this);
+//   }
+//   incrementCount() {
+//     this.setState({ count: this.state.count + 1 });
+//   }
   
-//   const [firstName, setFirstName] = useState(() =>
-//     window.localStorage.getItem('hooksFirstName') || ''
-//   );
-//   const [lastName, setLastName] = useState(() =>
-//     window.localStorage.getItem('hooksLastName') || ''
-//   );
-//   const handleFirstNameChange = (e) => setFirstName(e.target.value);
-//   const handleLastNameChange = (e) => setLastName(e.target.value);
+//   componentDidMount() { document.title = `You clicked ${this.state.count} times`; }
+//   componentDidUpdate() { document.title = `You clicked ${this.state.count} times`; }
 
-//   useEffect(() => {
-//     window.localStorage.setItem('hooksFirstName', firstName);
-//     window.localStorage.setItem('hooksLastName', lastName);
-//   });
-
-//   return (
-//     <div>
-//       <input value={firstName} onChange={handleFirstNameChange} /><br />
-//       <input value={lastName} onChange={handleLastNameChange} />
-//       <p>
-//         Hello, <span>{firstName} {lastName}</span>
-//       </p>
-//     </div>
-//   );
+//   render() {
+//     return (
+//       <div>
+//         <p>You clicked {this.state.count} times</p>
+//         <button onClick={this.incrementCount}>Click Me</button>
+//       </div>
+//     );
+//   }
 // }
 
+// export default Counter;
 
+
+//Function Component
 import React, { useState, useEffect } from 'react';
 
 export default function App() {
